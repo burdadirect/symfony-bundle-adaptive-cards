@@ -1,0 +1,36 @@
+{
+  "name": "burdadirect/symfony-bundle-adaptive-cards",
+  "description": "HBM Adaptive Cards Bundle - Create adaptive cards for the microsoft office environment.",
+  "authors" : [{
+    "name" : "Christian Puchinger",
+    "email" : "christian.puchinger@burda.com"
+  }],
+  "repositories" : [
+    {
+      "type": "vcs",
+      "url": "git@github.com:burdadirect/codestyle.git"
+    }
+  ],
+  "license": "MIT",
+  "type": "symfony-bundle",
+  "autoload": {
+    "psr-4": {
+      "HBM\\AdaptiveCardsBundle\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^8.3.0",
+    "symfony/config": "^7.3",
+    "symfony/dependency-injection": "^7.3",
+    "symfony/http-kernel": "^7.3"
+  },
+  "require-dev": {
+    "burdadirect/codestyle": "dev-main",
+    "roave/security-advisories": "dev-latest"
+  },
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true
+    }
+  }
+}
