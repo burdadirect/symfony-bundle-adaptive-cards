@@ -44,7 +44,7 @@ abstract class AbstractAction extends AbstractItem
         return $this->normalize($data);
     }
 
-    /****************************************************************************/
+    /**************************************************************************/
 
     public function getFallback(): ?AbstractAction
     {

@@ -23,7 +23,7 @@ abstract class AbstractElement extends AbstractItem
     public bool $isVisible = true;
     public bool $isSortKey = false;
 
-    /****************************************************************************/
+    /**************************************************************************/
 
     public function setTarget(?Target $target): self
     {
@@ -41,7 +41,7 @@ abstract class AbstractElement extends AbstractItem
         return $this;
     }
 
-    /****************************************************************************/
+    /**************************************************************************/
 
     public function toArray(): array
     {

@@ -28,6 +28,7 @@ class Column extends AbstractElement
     public ?Vertical $vertical = null;
     public ?HeightColumn $height = HeightColumn::AUTOMATIC;
     public ?WidthColumn $width = WidthColumn::STRETCH;
+    public ?string $widthPixel = null;
     public ?string $minHeightPixel = null;
     public ?bool $rtl = null;
 
@@ -40,7 +41,7 @@ class Column extends AbstractElement
     // Select action
     public ?AbstractAction $selectAction = null;
 
-    /****************************************************************************/
+    /**************************************************************************/
 
     public function toArray(): array
     {
@@ -53,7 +54,7 @@ class Column extends AbstractElement
         $data['horizontalAlignment'] = $this->horizontal?->value;
         $data['verticalContentAlignment'] = $this->vertical?->value;
         $data['height'] = $this->height?->value;
-        $data['width'] = $this->width?->value;
+        $data['width'] = $this->widthPixel ?? $this->width?->value;
         $data['minHeight'] = $this->minHeightPixel;
         $data['rtl'] = $this->rtl;
 
@@ -69,7 +70,7 @@ class Column extends AbstractElement
         return $this->normalize($data);
     }
 
-    /****************************************************************************/
+    /**************************************************************************/
 
     public function getBackgroundImage(): ?BackgroundImage
     {
@@ -163,6 +164,18 @@ class Column extends AbstractElement
     public function setWidth(?WidthColumn $width): Column
     {
         $this->width = $width;
+
+        return $this;
+    }
+
+    public function getWidthPixel(): ?string
+    {
+        return $this->widthPixel;
+    }
+
+    public function setWidthPixel(?string $widthPixel): Column
+    {
+        $this->widthPixel = $widthPixel;
 
         return $this;
     }
