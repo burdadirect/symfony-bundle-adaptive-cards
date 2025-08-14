@@ -46,7 +46,7 @@ class Image extends AbstractElement
 
         $data['spacing'] = $this->spacing?->value;
         $data['separator'] = $this->separator;
-        $data['horizontalContentAlignment'] = $this->horizontal?->value;
+        $data['horizontalAlignment'] = $this->horizontal?->value;
         $data['verticalContentAlignment'] = $this->vertical?->value;
         $data['height'] = $this->heightPixel ?? $this->height?->value;
         $data['width'] = $this->widthPixel;
