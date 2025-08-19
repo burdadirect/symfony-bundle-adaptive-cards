@@ -2,6 +2,10 @@
 
 namespace HBM\AdaptiveCardsBundle\Schema\Property;
 
+/**
+ * See the following page for icon limitations:
+ * https://learn.microsoft.com/en-us/sharepoint/dev/spfx/viva/get-started/fluent-icons-limitations
+ */
 enum IconName: string
 {
     case AccessTime = 'AccessTime';
