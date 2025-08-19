@@ -5,6 +5,8 @@ namespace HBM\AdaptiveCardsBundle\Schema;
 class AdaptiveCard
 {
 
+    public array $msteams = [];
+
     /** @var AbstractItem[] $items */
     private array $items = [];
 
@@ -34,6 +36,7 @@ class AdaptiveCard
         $data['speak'] = 'Representation of an issue';
         $data['$schema'] = 'https://adaptivecards.io/schemas/adaptive-card.json';
         $data['version'] = '1.5';
+        $data['msteams'] = $this->msteams;
         $data['body'] = [];
 
         foreach ($this->items as $item) {
