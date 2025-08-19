@@ -63,4 +63,79 @@ abstract class AbstractElement extends AbstractItem
 
         return $this->normalize($data);
     }
+
+    /**************************************************************************/
+
+    public function getFallback(): ?AbstractElement
+    {
+        return $this->fallback;
+    }
+
+    public function setFallback(?AbstractElement $fallback): AbstractElement
+    {
+        $this->fallback = $fallback;
+
+        return $this;
+    }
+
+    public function getId(): ?string
+    {
+        return $this->id;
+    }
+
+    public function setId(?string $id): AbstractElement
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    public function getLang(): ?string
+    {
+        return $this->lang;
+    }
+
+    public function setLang(?string $lang): AbstractElement
+    {
+        $this->lang = $lang;
+
+        return $this;
+    }
+
+    public function getGridArea(): ?string
+    {
+        return $this->gridArea;
+    }
+
+    public function setGridArea(?string $gridArea): AbstractElement
+    {
+        $this->gridArea = $gridArea;
+
+        return $this;
+    }
+
+    public function isVisible(): bool
+    {
+        return $this->isVisible;
+    }
+
+    public function setIsVisible(bool $isVisible): AbstractElement
+    {
+        $this->isVisible = $isVisible;
+
+        return $this;
+    }
+
+    public function isSortKey(): bool
+    {
+        return $this->isSortKey;
+    }
+
+    public function setIsSortKey(bool $isSortKey): AbstractElement
+    {
+        $this->isSortKey = $isSortKey;
+
+        return $this;
+    }
+
 }
